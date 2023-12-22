@@ -28,6 +28,7 @@ const UseAuthForm: FC<pageProps> = ({}) => {
 
   const onSubmit = async function (data: EmailValidatorSchema) {
     try {
+      console.log(data);
       const result = await signIn("email", {
         email: data.email.toLowerCase(),
         redirect: false,
