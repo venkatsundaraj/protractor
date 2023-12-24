@@ -1,5 +1,5 @@
 import { authOptions } from "@/utils/auth";
-import { NextApiRequest, NextApiResponse } from "next";
+
 import NextAuth from "next-auth";
 
 export const handler = NextAuth(authOptions);
