@@ -30,7 +30,7 @@ export default withAuth(
     }
 
     if (req.nextUrl.pathname === "/") {
-      return NextResponse.redirect("/dashboard");
+      return NextResponse.redirect(new URL("/dashboard", req.url));
     }
   },
   {
