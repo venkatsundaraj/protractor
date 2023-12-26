@@ -28,6 +28,10 @@ export default withAuth(
         new URL(`/login?from=${encodeURIComponent(url)}`, req.url)
       );
     }
+
+    if (req.nextUrl.pathname === "/") {
+      return NextResponse.redirect("/dashboard");
+    }
   },
   {
     callbacks: {
